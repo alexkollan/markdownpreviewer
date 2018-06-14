@@ -63,7 +63,7 @@ class Editor extends Component {
   render() {
     return (
       <div  className="editor">
-        <textarea id="editor" className="editorTextArea" onChange={this.handleChange} value={this.state.textAreaText}/>
+        <textarea id="editor" onChange={this.handleChange} value={this.state.textAreaText}/>
       </div>
     );
   }

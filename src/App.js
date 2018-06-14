@@ -28,9 +28,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h2>Mobile first Markdown Previewer</h2>
-        <Editor sendText={this.takeTextFromEditor}/>
-        <Previewer textFromEditor={this.state.converted}/>
+        <h2>Markdown Previewer</h2>
+        <div className='container'>
+          <Editor sendText={this.takeTextFromEditor}/>
+          <Previewer textFromEditor={this.state.converted}/>
+        </div>
       </div>
     );
   }

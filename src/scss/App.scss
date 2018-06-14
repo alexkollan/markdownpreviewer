@@ -3,19 +3,79 @@ $lightBack: #ECDFBD;
 $blue: #20457C;
 $textBold: #FB6648;
 $purpleRed: #5E3448;
-
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin flex-grow($int) {
+  -webkit-box-flex: $int;
+  -moz-box-flex: $int;
+  -webkit-flex-grow: $int;
+  -ms-flex: $int;
+  flex-grow: $int;
+}
+body{
+  background-color: rgb(43, 36, 28);
+  color: $lightBack;
+}
+a{
+  color: $textBold;
+  &:visited{
+    color: $textBold;
+  }
+  
+}
 .App {
   text-align: center;
+  
 }
 
 .editor, .previewer{
-  // border: 1px solid black;
   min-height: 200px;
   height: 250px;
   margin-bottom: 20px; 
 }
+.editor{
+  background-color: $lightBack;
+  padding: 0px;
+  textarea{
+    width: 98%;
+    height: 98%;
+    margin: 0px;
+    background: transparent;
+    outline: none;
+    resize: none;
+    overflow: auto;
+    color: #20457C;
+    font-size: 1.3em;
+  }
+}
 
-.editorTextArea{
-  width: 100%;
-  height: 100%;
+@media (min-width: 600px) {
+  .editor, .previewer{
+    height: 92.5vh;
+    margin-bottom: 0px; 
+  }
+
+  .container{
+    @include flexbox();
+  }
+
+
+  .editor{
+    background-color: $lightBack;
+    padding: 0px;
+    @include flex-grow(1);
+    textarea{
+      width: 98%;
+      height: 99%;
+      border: none;
+    }
+  }
+  .previewer{
+    @include flex-grow(1);
+  }
 }
