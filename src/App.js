@@ -14,10 +14,9 @@ class App extends Component {
     }
   }
 
-  takeTextFromEditor= (text) => {
-    this.setState({fromEditor: text},()=>{
-      this.convertText();
-    })
+  takeTextFromEditor= async (text) => {
+    await this.setState({fromEditor:text});
+    this.convertText();
   }
   convertText = () => {
     let mdown = this.state.fromEditor;
