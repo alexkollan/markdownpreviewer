@@ -1,0 +1,21 @@
+$textNormal: #3B3A35;
+$lightBack: #ECDFBD;
+$blue: #20457C;
+$textBold: #FB6648;
+$purpleRed: #5E3448;
+
+.App {
+  text-align: center;
+}
+
+.editor, .previewer{
+  // border: 1px solid black;
+  min-height: 200px;
+  height: 250px;
+  margin-bottom: 20px; 
+}
+
+.editorTextArea{
+  width: 100%;
+  height: 100%;
+}

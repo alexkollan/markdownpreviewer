@@ -1,0 +1,11 @@
+.App {
+  text-align: center; }
+
+.editor, .previewer {
+  min-height: 200px;
+  height: 250px;
+  margin-bottom: 20px; }
+
+.editorTextArea {
+  width: 100%;
+  height: 100%; }
